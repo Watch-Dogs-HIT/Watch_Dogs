@@ -314,8 +314,11 @@ def get_mem_info():
         allocates 1GB of memory (using malloc(3) or similar), but touches only 300MB of that memory will show up as
          using only 300MB of memory even if it has the address space allocated for the entire 1GB.
 
-        This 1GB is memory which has been "committed" to by the VM and can be used at any time by the allocating application.  With strict overcommit enabled on the system (mode 2 in /proc/sys/vm/overcommit_memory), allo‐
-        cations which would exceed the CommitLimit will not be permitted.  This is useful if one needs to guarantee that processes will not fail due to lack of memory once that memory has been successfully allocated.
+        This 1GB is memory which has been "committed" to by the VM and can be used at any time by the allocating application.
+        With strict overcommit enabled on the system (mode 2 in /proc/sys/vm/overcommit_memory), allo‐
+        cations which would exceed the CommitLimit will not be permitted.  
+        This is useful if one needs to guarantee that processes will not fail due to 
+        lack of memory once that memory has been successfully allocated.
 
     VmallocTotal %lu
         Total size of vmalloc memory area.
@@ -614,7 +617,8 @@ def get_disk_stat(style='G'):
         /proc/mounts
     
         Before kernel 2.4.19, this file was a list of all the filesystems currently mounted on the system.  
-        With the introduction of per-process mount namespaces in Linux 2.4.19 (see mount_namespaces(7)), this file became a link
+        With the introduction of per-process mount namespaces in Linux 2.4.19 (see mount_namespaces(7)), 
+        this file became a link
         to /proc/self/mounts, which lists the mount points of the process's own mount namespace.  
         The format of this file is documented in fstab(5).
         """
