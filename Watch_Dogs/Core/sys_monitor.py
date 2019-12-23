@@ -245,8 +245,11 @@ def get_mem_info():
         (Starting with Linux 2.6.19, CONFIG_HIGHMEM is required.)  Amount of free highmem.
 
     LowTotal %lu
-        (Starting with Linux 2.6.19, CONFIG_HIGHMEM is required.)  Total amount of lowmem.  Lowmem is memory which can be used for everything that highmem can be used for, but it is also available for the kernel's use for
-        its own data structures.  Among many other things, it is where everything from Slab is allocated.  Bad things happen when you're out of lowmem.
+        (Starting with Linux 2.6.19, CONFIG_HIGHMEM is required.)  Total amount of lowmem.  
+        Lowmem is memory which can be used for everything that highmem can be used for, 
+        but it is also available for the kernel's use for
+        its own data structures.  Among many other things, it is where everything from Slab is allocated.  
+        Bad things happen when you're out of lowmem.
 
     LowFree %lu
         (Starting with Linux 2.6.19, CONFIG_HIGHMEM is required.)  Amount of free lowmem.
@@ -336,7 +339,8 @@ def get_mem_info():
         (CONFIG_TRANSPARENT_HUGEPAGE is required.)  Non-file backed huge pages mapped into user-space page tables.
 
     ShmemHugePages %lu (since Linux 4.8)
-        (CONFIG_TRANSPARENT_HUGEPAGE is required.)  Memory used by shared memory (shmem) and tmpfs(5) allocated with huge pages
+        (CONFIG_TRANSPARENT_HUGEPAGE is required.)  Memory used by shared memory (shmem) and tmpfs(5) 
+        allocated with huge pages
 
     ShmemPmdMapped %lu (since Linux 4.8)
         (CONFIG_TRANSPARENT_HUGEPAGE is required.)  Shared memory mapped into user space with huge pages.
@@ -373,7 +377,8 @@ def get_mem_info():
         Number of bytes of RAM linearly mapped by kernel in 4MB pages.  (x86 with CONFIG_X86_64 or CONFIG_X86_PAE enabled.)
 
     DirectMap2M %lu (since Linux 2.6.27)
-        Number of bytes of RAM linearly mapped by kernel in 2MB pages.  (x86 with neither CONFIG_X86_64 nor CONFIG_X86_PAE enabled.)
+        Number of bytes of RAM linearly mapped by kernel in 2MB pages.  (x86 with neither CONFIG_X86_64 nor 
+        CONFIG_X86_PAE enabled.)
 
     DirectMap1G %lu (since Linux 2.6.27)
         (x86 with CONFIG_X86_64 and CONFIG_X86_DIRECT_GBPAGES enabled.)
